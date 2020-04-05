@@ -18,7 +18,7 @@ if [[ -z $SG_PREFERRED_SERVER ]]; then
     read -p "Please enter your Preferred server: CSC(1), STUDENT CS(2):  " SG_PREFERRED_SERVER
     case $SG_PREFERRED_SERVER in
         1|2)
-            echo "SG_PREFERRED_SERVER: CSC(1), STUDENT CS(2)" >> $CONFIG_PATH
+            echo "# SG_PREFERRED_SERVER: CSC(1), STUDENT CS(2)" >> $CONFIG_PATH
             echo "export SG_PREFERRED_SERVER=$SG_PREFERRED_SERVER" >> $CONFIG_PATH
             ;;
         *)
