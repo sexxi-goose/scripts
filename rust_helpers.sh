@@ -6,8 +6,6 @@ export SG_RUST_BUILD_LOG=$HOME/www/rust-log-latest
 
 runRustStuff()
 {
-    set -e
-
     mkdir -p $SG_RUST_BUILD_LOG_DIR
     pushd $SG_RUST_PROJECT_REPO
 
@@ -50,7 +48,7 @@ testRustCommit()
 
 screenTestCommit()
 {
-    screen -dm zsh -c "source $HOME/rust_stuff.sh; testRustCommit"
+    screen -dm zsh -c "source $HOME/rust_helpers.sh; testRustCommit"
 }
 
 
