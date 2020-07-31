@@ -32,7 +32,7 @@ buildRust()
 
 testRust()
 {
-    runRustStuff test -i --stage 1 $@
+    runRustStuff test -j50 -i --stage 1 $@
 }
 
 
@@ -43,7 +43,7 @@ openBuildLog()
 
 testRustCommit()
 {
-    runRustStuff test-commit test -i --stage 1 $@
+    runRustStuff test-commit test -j50 -i --stage 1 $@
 }
 
 screenTestCommit()
