@@ -2,7 +2,8 @@
 
 SG_RUST_PROJECT_REPO=$HOME/rust
 SG_RUST_BUILD_LOG_DIR=$HOME/www/rust-builds
-export SG_RUST_BUILD_LOG=$HOME/www/rust-log-latest
+SG_RUSTC_TOOLCHAIN_NAME=stage1
+SG_RUST_BUILD_LOG=$HOME/www/rust-log-latest
 
 runRustStuff()
 {
@@ -51,4 +52,7 @@ screenTestCommit()
     screen -dm zsh -c "source $HOME/rust_helpers.sh; testRustCommit"
 }
 
-
+rustSetDevBuild()
+{
+    rustup toolchain link $SG_RUSTC_TOOLCHAIN_NAME $SG_RUST_PROJECT_REPO/build/x86_64-unknown-linux-gnu/stage1
+}
